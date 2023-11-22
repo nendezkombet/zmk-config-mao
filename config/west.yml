@@ -2,7 +2,7 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: sandipratama
+    - name: nendezkombet
       url-base: https://github.com/nendezkombet
   projects:
     - name: zmk
