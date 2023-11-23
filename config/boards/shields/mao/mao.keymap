@@ -36,7 +36,7 @@
 	combo_save {
 	    timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&kp LC(&kp S)>;
+            bindings = <&kp LC(S)>;
 		layers = <FRST>;
 	};
 	combo_cmd {
