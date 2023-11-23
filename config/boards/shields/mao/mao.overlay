@@ -93,14 +93,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6)	RC(3,7) RC(3,8) RC(3,9) 
 };
     led-widgets {
         compatible = "zmk,led-widgets";
-        boot {
-            boot {
-                priority = <100>;
-                blue { len-ms = <100>; brightness = <0 0 50>; };
-                off { len-ms = <100>; };
-                blue2 { len-ms = <100>; brightness = <0 0 50>; };
-            };
-        };
         layer {
             lower {
                 arg = <1>;
