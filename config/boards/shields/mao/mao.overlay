@@ -27,15 +27,9 @@
 	chosen {
 		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
-		zmk,backlight = &backlight;
+		zmk,led-widgets-dev = &leds;
 	};
-	backlight: backlight_leds {
-		compatible = "gpio-leds";
-		led_mosfet {
-			gpios = <&shifter 13 GPIO_ACTIVE_HIGH>;
-			label = "Backlight LED 0";
-		};
-	};
+
 
 	default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
@@ -80,6 +74,51 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6)	RC(3,7) RC(3,8) RC(3,9) 
 			, <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			;
 	};
+
+    leds: leds {
+        compatible = "pwm-leds";
+        red_led: led_r {
+            pwms = <&pwm0 26>;
+            label = "Red LED";
+        };
+        green_led: led_g {
+            pwms = <&pwm0 30>;
+            label = "Green LED";
+        };
+        blue_led: led_b {
+            pwms = <&pwm0 6>;
+            label = "Blue LED";
+        };
+    };
+
+    led-widgets {
+        compatible = "zmk,led-widgets";
+        boot {
+            boot {
+                priority = <100>;
+                blue { len-ms = <100>; brightness = <0 0 50>; };
+                off { len-ms = <100>; };
+                blue2 { len-ms = <100>; brightness = <0 0 50>; };
+            };
+        };
+        layer {
+            lower {
+                arg = <1>;
+                priority = <20>;
+                stat { brightness = <0 0 20>; };
+            };
+            raise {
+                arg = <2>;
+                priority = <20>;
+                stat { brightness = <0 20 0>; };
+            };
+            game {
+                arg = <3>;
+                priority = <20>;
+                stat { brightness = <0 0 50>; };
+            };
+        };
+
    mao_encoder: mao_encoder {
      compatible = "alps,ec11";
      label = "mao encoder";
@@ -96,4 +135,13 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6)	RC(3,7) RC(3,8) RC(3,9) 
 
 &mao_encoder { 
   status = "okay"; 
+};
+&pwm0 {
+    status = "okay";
+    ch0-pin = <26>;
+    ch1-pin = <30>;
+    ch2-pin = <6>;
+    ch0-inverted;
+    ch1-inverted;
+    ch2-inverted;
 };
