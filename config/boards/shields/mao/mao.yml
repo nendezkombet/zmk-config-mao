@@ -7,3 +7,4 @@ requires: [seeduino_xiao_ble]
 features:
   - keys
   - encoder
+  - pwm
