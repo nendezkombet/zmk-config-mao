@@ -76,8 +76,8 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6)	RC(3,7) RC(3,8) RC(3,9) 
    mao_encoder: mao_encoder {
      compatible = "alps,ec11";
      label = "mao encoder";
-     a-gpios = <&xiao_d 6(GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-     b-gpios = <&xiao_d 9(GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+     a-gpios = <&xiao_d 9(GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+     b-gpios = <&xiao_d 6(GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
      resolution = <4>;
    };
 
