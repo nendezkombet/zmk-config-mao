@@ -25,7 +25,7 @@
 	    timeout-ms = <50>;
             key-positions = <5 6>;
             bindings = <&to 3>;
-		layers = <FRTH>;
+		layers = <FRST>;
 	};
 
 	combo_delete {
@@ -95,8 +95,8 @@
         configuration_layer {
             label = "Configuration";
             bindings = <
-                &trans		&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_CLR	&out OUT_TOG			&trans		&trans		&trans		&trans		&trans		&trans
-                &trans		&trans		&trans		&trans		&trans	 	&trans				&trans		&trans		&trans		&trans		&trans		&trans
+                &trans		&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&out OUT_BLE	&out OUT_USB			&trans		&trans		&trans		&trans		&trans		&trans
+                &trans		&trans		&trans		&trans		&bt BT_CLR	&out OUT_TOG			&trans		&trans		&trans		&trans		&trans		&trans
                 &trans		&trans		&trans		&trans    	&trans		&trans				&trans		&trans		&trans		&trans		&trans		&trans
                 &trans		&trans		&trans		&trans		&trans		&trans		&to 0		&trans		&trans		&trans		&trans		&trans		&trans
             >;
