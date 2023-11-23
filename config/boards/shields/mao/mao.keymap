@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/backlight.h>
-#include "../zmk-nodefree-config/helper.h"
 
 #define FRST  0
 #define SCND  1
