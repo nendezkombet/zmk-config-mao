@@ -19,4 +19,4 @@
 ---
 include:
   - board: xiao_ble//zmk
-    shield: mao rgbled_adapter
+    shield:shield: hummingbird rgbled_adapter
