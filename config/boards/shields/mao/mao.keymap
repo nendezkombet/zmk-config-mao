@@ -70,7 +70,7 @@
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        nav_layer    
+        nav_layer {   
             label = "Nav";
             bindings = <
                 &trans		&trans		&trans		&trans		&trans		&trans				    &trans		&trans		&trans		&kp UP			&trans		&trans
